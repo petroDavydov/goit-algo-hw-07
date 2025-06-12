@@ -239,7 +239,7 @@ else:
     print(f"{Fore.RED}Невідома команда.{Style.RESET_ALL}")
 
 
-# -----------------------------------
+# ------------for study...-----------------------
 
 def draw_tree(node, graph, parent=None):
     if node is None:
@@ -275,7 +275,7 @@ def hierarchy_pos(G, root, width=1.0, vert_gap=0.2, vert_loc=0, xcenter=0.5):
 
 
 if root:
-    pos = hierarchy_pos(G, root.name)  # 👈 Розташування (див. нижче)
+    pos = hierarchy_pos(G, root.name)
     plt.figure(figsize=(12, 8))
     nx.draw(G, pos, with_labels=True, node_size=1200,
             node_color="lightgreen", font_size=10)
