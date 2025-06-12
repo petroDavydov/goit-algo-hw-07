@@ -1,0 +1,4 @@
+# Comment
+
+class Comment:
+    pass
