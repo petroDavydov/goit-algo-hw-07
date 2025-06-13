@@ -4,7 +4,7 @@ init(autoreset=True)
 
 
 class Comment:
-    def __init__(self, text, author) -> str:
+    def __init__(self, text, author) -> None:
         self.text = text
         self.author = author
         self.replies = []
