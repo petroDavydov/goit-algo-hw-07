@@ -24,6 +24,12 @@ def save_servers_to_file():
     with open(DATA_PATH, "w") as f:
         json.dump(servers, f, indent=4)
 
+
+def show_current_servers():
+    print(f"\n{Fore.CYAN}Сервери що залишилися після останніх дій:{Style.RESET_ALL}")
+    for server in servers:
+        print(f"{Fore.LIGHTGREEN_EX} - {server}")
+
 # ----------------------------------------------------
 # Створення ServerNode
 
@@ -202,8 +208,8 @@ for server in servers:
 # --------------------------------
 
 print(f"{Fore.WHITE}Поточні сервери:{Style.RESET_ALL}")
-for s in servers:
-    print("-", s)
+for server in servers:
+    print("-", server)
 
 print(f"\n{Fore.YELLOW}Що хочеш зробити з деревом серверів?{Style.RESET_ALL}")
 print("1 — Додати новий сервер")
@@ -306,3 +312,6 @@ if root:
         print(f"{Fore.LIGHTRED_EX}Максимальний сервер не знайдено.{Style.RESET_ALL}")
 else:
     print(f"{Fore.LIGHTRED_EX}Дерево серверів порожнє.{Style.RESET_ALL}")
+
+
+show_current_servers()
