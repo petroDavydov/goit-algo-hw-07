@@ -1,8 +1,10 @@
 # Comment
 from colorama import Fore, Style, init
-init(autoreset=True) 
+init(autoreset=True)
+
+
 class Comment:
-    def __init__(self,text,author) -> str:
+    def __init__(self, text, author) -> str:
         self.text = text
         self.author = author
         self.replies = []
@@ -21,10 +23,9 @@ class Comment:
             print(f"{Fore.RED}{prefix}{self.text}{Style.RESET_ALL}")
         else:
             print(f"{Fore.LIGHTBLUE_EX}{prefix}{self.author}: {self.text}")
-        
+
         for reply in self.replies:
             reply.show_on_display(indent + 4)
-
 
 
 root_comment = Comment("Яка чудова книга!", "Бодя")
